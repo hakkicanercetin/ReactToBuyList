@@ -10,7 +10,6 @@ import { ShopSelect } from "./Components/ShopSelect/ShopSelect";
 import { CategorySelect } from "./Components/CategorySelect/CategorySelect";
 import { deleteProduct, isProductBought } from "./Functions/EventFunctions";
 import { handleButton, handleCategorySelect, handleInput, handleShopSelect } from "./Functions/HandlerFunctions";
-import { FilteredTable } from "./Components/FilteredTable/FilteredTable";
 function App() {
   const [productList,setProductList] = useState([])
   const [product, setProduct] = useState({
@@ -40,7 +39,6 @@ function App() {
       <Button onClick={()=>{handleButton(product,setProduct,productList,setProductList)}}>Ekle</Button>
     </div>
       <MyTable productList={productList} isProductBought={(id)=>{isProductBought(id,productList,setProductList)}} deleteProduct={(id)=>deleteProduct(id,productList,setProductList)}></MyTable>
-    <FilteredTable handleShopSelect={(e)=>handleShopSelect(e,product,setProduct)} product={product} productList={productList}></FilteredTable>
     </>
   )
 }
