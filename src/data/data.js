@@ -16,22 +16,22 @@ export const shops = [
   export const categories = [
     {
       id: 1,
-      name: "elektronik",
+      name: "Elektronik",
     },
     {
       id: 2,
-      name: "şarküteri",
+      name: "Şarküteri",
     },
     {
       id: 3,
-      name: "oyuncak",
+      name: "Oyuncak",
     },
     {
       id: 4,
-      name: "bakliyat",
+      name: "Bakliyat",
     },
     {
       id: 5,
-      name: "fırın",
+      name: "Fırın",
     },
   ];

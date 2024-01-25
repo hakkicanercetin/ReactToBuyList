@@ -2,7 +2,14 @@ export function isProductBought(id, productList, setProductList) {
     setProductList((oldProductList) => {
       const updatedProductList = oldProductList.map((product) => {
         if (product.id === id) {
-          return { ...product, isBought: true };
+          if(product.isBought == false)
+          {
+            return { ...product, isBought: true }
+          }
+          else
+          {
+            return { ...product, isBought: false }
+          }
         }
         return product;
       });

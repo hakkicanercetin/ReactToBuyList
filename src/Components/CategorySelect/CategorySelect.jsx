@@ -1,14 +1,15 @@
 /* eslint-disable react/prop-types */
+import { Form } from "react-bootstrap";
 import { categories } from "../../data/data";
 
 export function CategorySelect({handleCategorySelect,product})
 {
     return (
-        <select onChange={handleCategorySelect} value={product.category}>
+        <Form.Select className="form-select" onChange={handleCategorySelect} value={product.category} size="lg">
             <option disabled={product.category?true:false}>Kategori seçiniz</option>
             {categories.map((category)=>(
                 <option key={category.id} value={category.id}>{category.name}</option>
             ))}
-      </select>
+        </Form.Select>
     )
 }
